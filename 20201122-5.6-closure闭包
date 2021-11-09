@@ -1,0 +1,12 @@
+def outer(n):
+    num = n
+
+    def inner():
+        return num + 1
+    return inner
+
+
+print(outer(3))
+# ==> <function outer.<locals>.inner at 0x000001AA20F98C10>
+print(outer(5)())
+# ==> 6
